@@ -1,23 +1,44 @@
-name: Release to NuGet
+name: NuGet Generation
 
 on:
-  release:
-    types: [published]
-    
+  push:
+    branches:
+      - main
+
 jobs:
   build:
     runs-on: ubuntu-latest
-    timeout-minutes: 5
+    name: Update NuGet package
     steps:
-    - name: Checkout
-      uses: actions/checkout@v2
-    - name: Setup .NET SDK
-      uses: actions/setup-dotnet@v1
-    - name: Build
-      run: dotnet build -c Release
-    - name: Test
-      run: dotnet test -c Release --no-build
-    - name: Pack nugets
-      run: dotnet pack -c Release --no-build --output .
-    - name: Push to NuGet
-      run: dotnet nuget push "*.nupkg" --api-key ${{secrets.nuget_api_key}} --source https://api.nuget.org/v3/index.json
+
+      - name: Checkout repository
+        uses: actions/checkout@v3
+
+      - name: Setup dotnet
+        uses: actions/setup-dotnet@v2
+        with:
+          dotnet-version: '10.0.x'
+
+      - name: Install dependencies
+        run: dotnet restore MythosSoftware.EventSource.Data.csproj
+
+      - name: Build
+        run: dotnet build MythosSoftware.EventSource.Data.csproj --configuration Release
+
+      - name: Clean package output
+        run: rm -rf out
+
+      - name: Build solution and generate NuGet package
+        run: |
+          BASE_VERSION=$(grep -oPm1 "(?<=<Version>)[^<]+" MythosSoftware.EventSource.Data.csproj)
+          VERSION_PREFIX=$(echo "$BASE_VERSION" | cut -d. -f1,2)
+          PACKAGE_VERSION="$VERSION_PREFIX.${{ github.run_number }}"
+
+          echo "Packing version: $PACKAGE_VERSION"
+          dotnet pack MythosSoftware.EventSource.Data.csproj -c Release -o out -p:PackageVersion=$PACKAGE_VERSION 
+
+      - name: Display folder
+        run: ls out/ && stat out/*
+
+      - name: Publish
+        run: dotnet nuget push out/*.nupkg --source 'https://api.nuget.org/v3/index.json' --api-key ${{secrets.NUGET_API_KEY}}
