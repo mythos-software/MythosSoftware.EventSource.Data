@@ -1,0 +1,12 @@
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.csproj.AssemblyReference.cache
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.GeneratedMSBuildEditorConfig.editorconfig
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.AssemblyInfoInputs.cache
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.AssemblyInfo.cs
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.csproj.CoreCompileInputs.cache
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/bin/Debug/net10.0/MythosSoftware.EventSource.Data.deps.json
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/bin/Debug/net10.0/MythosSoftware.EventSource.Data.dll
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/bin/Debug/net10.0/MythosSoftware.EventSource.Data.pdb
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.dll
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/refint/MythosSoftware.EventSource.Data.dll
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/MythosSoftware.EventSource.Data.pdb
+/Users/dragutindumic/Documents/ms/EventSource/MythosSoftware.EventSource/MythosSoftware.EventSource.Data/obj/Debug/net10.0/ref/MythosSoftware.EventSource.Data.dll
