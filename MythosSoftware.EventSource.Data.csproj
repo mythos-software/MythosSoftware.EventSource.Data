@@ -11,4 +11,10 @@
       <PackageReference Include="MythosSoftware.EventSource.Application" Version="1.0.1" />
     </ItemGroup>
 
+    <PropertyGroup>
+        <PackageId>MythosSoftware.EventSource.Data</PackageId>
+        <RepositoryType>git</RepositoryType>
+        <RepositoryUrl>https://github.com/mythos-software/MythosSoftware.EventSource.Data</RepositoryUrl>
+    </PropertyGroup>
+
 </Project>
